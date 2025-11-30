@@ -118,36 +118,36 @@ A detailed sample output is stored in:
 
 submission/demo_output.txt
 
-The Build — Tools & Technologies Used
-Languages & Frameworks
+**The Build — Tools & Technologies Used
+Languages & Frameworks**
 
-Python 3.10+
+-Python 3.10+
 
-Gemini via google-genai
+-Gemini via google-genai
 
-Architecture
+**Architecture**
 
-Modular agent classes under app/agents
+-Modular agent classes under app/agents
 
-Tool system under app/tools
+-Tool system under app/tools
 
-Memory system under app/memory
+-Memory system under app/memory
 
-Logger for observability
+-Logger for observability
 
-Demo workflow under examples/
+-Demo workflow under examples/
 
-Tests under tests/
+-Tests under tests/
 
-Key libraries
+**Key libraries**
 
 google-genai (Gemini)
 
 pytest (testing)
 
-fastapi optional (for deployment / API exposure)
+fastapi(for deployment / API exposure)
 
-Core Files
+**Core Files**
 File	Purpose
 app/llm_client.py	Unified LLM wrapper for Gemini
 research_agent.py	Trend research agent
@@ -161,46 +161,45 @@ run_demo.py	Demo pipeline
 test_smoke.py	End-to-end test
 
 
-If I Had More Time
+## If I Had More Time
 
-If extended beyond the hackathon timeframe, I would add:
+If the project were extended beyond the hackathon timeframe, I would evolve PocketMuse into a more complete, production-ready system. My planned improvements include:
 
-1. Deployment to Cloud Run / Agent Engine
+### 1. Deployment to Cloud Run / Agent Engine
+I would deploy PocketMuse as a live, publicly accessible API.  
+This would allow users to generate micro-projects on demand from anywhere, and would demonstrate real cloud-based agent orchestration.
 
-A public API endpoint to generate micro-projects on demand.
+### 2. A Front-End UI
+I would build a minimal web interface to make PocketMuse usable without touching code.  
+The UI would allow users to:
+- Enter a prompt
+- View multiple ideas side-by-side
+- Select the idea they want to finalize
+- Download the final one-page pitch, README, or roadmap as a PDF
 
-2. A Front-End UI
+### 3. Adaptive Idea Ranking
+PocketMuse could become smarter over time by learning from user selections.  
+A lightweight reinforcement-learning style “ranking memory” could record which ideas people choose most often and adapt future ideation using:
+- historical ranking data  
+- user-specific preferences  
+- scoring heuristics
 
-A clean web interface where users can:
+### 4. GitHub Integration
+I would add an automated GitHub workflow that:
+- Creates a new repository for the chosen project
+- Generates a starter folder structure
+- Commits a README, roadmap, and placeholder code
+- Pushes everything to the user’s GitHub automatically  
+This turns PocketMuse into a true “project generator.”
 
-Enter prompt
+### 5. Plugin Ecosystem
+To make PocketMuse extensible, I would enable optional “idea packs,” such as:
+- **Startup Ideas Pack** — business, SaaS, and MVP-driven concepts  
+- **Research Automation Pack** — academic project ideas  
+- **Academic Project Pack** — college-level project blueprints  
+- **Creative Pack** — art, stories, games, and entertainment concepts  
 
-View ideas side by side
+This would allow users to customize PocketMuse based on industry or personal interests.
 
-Select which idea to finalize
+---
 
-Download the final pitch as PDF
-
-3. Adaptive Idea Ranking
-
-Use a reinforcement learning style “ranking memory” to improve ideation over time.
-
-4. Integration with GitHub
-
-Automatically:
-
-Create a repo
-
-Add scaffolded project structure
-
-Commit starter README
-
-5. Plugin ecosystem
-
-Let users install “expansion packs” like:
-
-Startup ideas pack
-
-Research automation pack
-
-Academic project pack
