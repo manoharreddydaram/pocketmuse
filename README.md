@@ -117,7 +117,7 @@ Expected result:
 
 ---
 
-## 📦 Deployment (Optional)
+## 📦 Deployment
 
 You can deploy using Docker or Cloud Run:
 
